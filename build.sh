@@ -5,7 +5,7 @@ export VERSION="0.0.7"
 rm -rf target
 mkdir -p target
 
-env GOOS=darwin GOARCH=amd64 CGO_ENABLED=1 go build -o ./target/oulogin-$VERSION-macos ./kubectl-login.go
+env GOOS=darwin GOARCH=arm64 CGO_ENABLED=1 go build -o ./target/oulogin-$VERSION-macos ./kubectl-login.go
 
 mkdir target/darwin
 cp ./target/oulogin-$VERSION-macos target/darwin/oulogin
